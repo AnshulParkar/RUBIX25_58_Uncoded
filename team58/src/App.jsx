@@ -5,6 +5,7 @@ import HeroSection from "./components/HeroSection";
 import FoodListingSection from "./components/FoodListingSection";
 import DonatePage from "./components/DonatePage";
 import ContactUs from "./components/ContactUs";
+import Partners from "./components/Partners";
 import "./App.css";
 
 function App() {
@@ -16,7 +17,9 @@ function App() {
           <Route path="/" element={<div><HeroSection /><FoodListingSection /></div>} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/donate" element={<DonatePage />} />
+          {/* <Route path="/partners" element={<Partners />}/>  */}
         </Routes>
+          <Partners />
       </div>
     </Router>
   );
