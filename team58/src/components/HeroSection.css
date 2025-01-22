@@ -7,15 +7,23 @@
     height: calc(100vh - 80px); /* Full height minus header height */
     background-color: #fff;
     padding: 20px;
-    background-image: url("C:\Users\Anshul Parkar\Documents\GitHub\RUBIX25_58_Uncoded\team58\src\images\zoma.png");
-    background-size: cover;
-    background-image: opacity(0.5);
-    background-position: center;
-  }
+    background-image: url("../images/zoma.png");
+    background-size: cover, cover;
+    background-position: center, center;
+    animation: moveBackground 10s ease infinite;
+}
 
-  .hero background-image {
-    opacity: 1;
-  }
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 0%, 100% 100%;
+    }
+    50% {
+        background-position: 100% 100%, 0% 0%;
+    }
+    100% {
+        background-position: 0% 0%, 100% 100%;
+    }
+}
   
   .hero-content h1 {
     font-size: 3em;
