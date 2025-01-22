@@ -7,18 +7,26 @@
     height: calc(100vh - 80px); /* Full height minus header height */
     background-color: #fff;
     padding: 20px;
+    background-image: url("C:\Users\Anshul Parkar\Documents\GitHub\RUBIX25_58_Uncoded\team58\src\images\zoma.png");
+    background-size: cover;
+    background-image: opacity(0.5);
+    background-position: center;
+  }
+
+  .hero background-image {
+    opacity: 1;
   }
   
   .hero-content h1 {
     font-size: 3em;
     margin-bottom: 20px;
-    color: #333;
+    color: #fbfbfb;
   }
   
   .hero-content p {
     font-size: 1.5em;
     margin-bottom: 30px;
-    color: #555;
+    color: #ffffff;
   }
   
   .hero-buttons {
