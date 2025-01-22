@@ -1,81 +1,15 @@
 import React from "react";
 import "./Partners.css"; // Importing the CSS file for styling
+import NGO1 from "../images/NGO1.png"; // Importing the image file for NGO1
 
 const Partners = () => {
   const organizations = [
-    // {
-    //   name: "Happy Meals Restaurant",
-    //   type: "Restaurant",
-    //   address: "123 Marine Drive, Mumbai",
-    //   donations: 120,
-    // },
     {
       name: "Helping Hands NGO",
       type: "NGO",
       address: "45 Bandra West, Mumbai",
-      donations: 300,
-      image: require("./images/Screenshot 2025-01-22 234350.png"),
+      image: NGO1, 
     },
-    // {
-    //   name: "Food Bank Alliance",
-    //   type: "Food Bank",
-    //   address: "789 Worli Sea Face, Mumbai",
-    //   donations: 450,
-    // },
-    // {
-    //   name: "Care & Share Trust",
-    //   type: "Trust",
-    //   address: "67 Dadar TT Circle, Mumbai",
-    //   donations: 200,
-    // },
-    // {
-    //   name: "Meal Makers",
-    //   type: "Restaurant",
-    //   address: "12 Andheri East, Mumbai",
-    //   donations: 180,
-    // },
-    // {
-    //   name: "Shelter for Souls",
-    //   type: "Food Shelter",
-    //   address: "98 Colaba Causeway, Mumbai",
-    //   donations: 220,
-    // },
-    // {
-    //   name: "Unity Kitchens",
-    //   type: "Restaurant",
-    //   address: "34 Juhu Beach Road, Mumbai",
-    //   donations: 150,
-    // },
-    // {
-    //   name: "The Humanity Project",
-    //   type: "NGO",
-    //   address: "90 Chembur East, Mumbai",
-    //   donations: 275,
-    // },
-    // {
-    //   name: "Bright Future Foundation",
-    //   type: "Trust",
-    //   address: "15 Goregaon West, Mumbai",
-    //   donations: 300,
-    // },
-    // {
-    //   name: "Mumbai Food Angels",
-    //   type: "Food Bank",
-    //   address: "22 Powai Lake Road, Mumbai",
-    //   donations: 400,
-    // },
-    // {
-    //   name: "Green Plate Restaurant",
-    //   type: "Restaurant",
-    //   address: "50 Lower Parel, Mumbai",
-    //   donations: 130,
-    // },
-    // {
-    //   name: "Compassionate Souls NGO",
-    //   type: "NGO",
-    //   address: "80 Borivali West, Mumbai",
-    //   donations: 350,
-    // },
   ];
 
   return (
@@ -87,7 +21,7 @@ const Partners = () => {
             <div
               className="card-image"
               style={{
-                backgroundImage: `url(${org.image})`, // Dynamically set the background image
+                backgroundImage: `url(${org.image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
