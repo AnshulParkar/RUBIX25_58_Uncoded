@@ -5,6 +5,11 @@
   padding: 10px 15px;
   background-color: #272424;
   box-shadow: 0px 4px 6px rgba(241, 237, 237, 0.481);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .logo {
