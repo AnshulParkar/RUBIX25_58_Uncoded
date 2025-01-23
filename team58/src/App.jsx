@@ -6,6 +6,7 @@ import FoodListingSection from "./components/FoodListingSection";
 import DonatePage from "./components/DonatePage";
 import ContactUs from "./components/ContactUs";
 import Partners from "./components/Partners";
+import AboutUs from "./components/AboutUs";
 import "./App.css";
 
 function App() {
@@ -14,12 +15,27 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<div><HeroSection /><FoodListingSection /></div>} />
-          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/" element={
+            <>
+              <div id="home">
+                <HeroSection />
+              </div>
+              <div id="about">
+                <AboutUs />
+              </div>
+              <div id="foodlisting">
+                <FoodListingSection />
+              </div>
+              <div id="partners">
+                <Partners />
+              </div>
+              <div id="contact">
+                <ContactUs />
+              </div>
+            </>
+          } />
           <Route path="/donate" element={<DonatePage />} />
-          {/* <Route path="/partners" element={<Partners />}/>  */}
         </Routes>
-          <Partners />
       </div>
     </Router>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import "./Header.css";
 
 function Header() {
@@ -7,13 +8,33 @@ function Header() {
       <div className="logo">Anna Rakshak</div>
       <nav className="nav">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#menu">Partners</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li>
+            <Link to="home" smooth={true} duration={500}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="about" smooth={true} duration={500}>
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link to="foodlisting" smooth={true} duration={500}>
+              Food Listing
+            </Link>
+          </li>
+          <li>
+            <Link to="partners" smooth={true} duration={500}>
+              Partners
+            </Link>
+          </li>
+          <li>
+            <Link to="contact" smooth={true} duration={500}>
+              Contact
+            </Link>
+          </li>
         </ul>
       </nav>
-      {/* <button className="book-button">Donate food</button> */}
       <button className="login-button">login/signup</button>
     </header>
   );
