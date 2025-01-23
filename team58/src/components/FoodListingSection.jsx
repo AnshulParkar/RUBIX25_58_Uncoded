@@ -1,41 +1,66 @@
 import React from "react";
-import "./FoodListingSection.css";
+import "./FoodListingSection.css"; // Importing the external CSS file
+import Paneer from "../images/paneer.png";
+import Jeera from "../images/jeera.png";
+import Aloo from "../images/aloo.png";
+import Dal from "../images/dal.png";
 
-function FoodListingSection() {
+ // Importing the image
+
+const FoodListing = () => {
+  const foodItems = [
+    {
+      name: "Paneer Butter Masala",
+      quantity: "9 servings",
+      expires: "2025-02-01",
+      donor: "Happy Meals Restaurant",
+      image: Paneer,
+    },
+    {
+      name: "Jeera Rice",
+      quantity: "3 servings",
+      expires: "2025-02-03",
+      donor: "Aarti Sharma",
+      image: Jeera,
+    },
+    {
+      name: "Aloo Gobi",
+      quantity: "1.5 kg",
+      expires: "2025-02-05",
+      donor: "Vikram Singh",
+      image: Aloo,
+    },
+    {
+      name: "Dal Tadka",
+      quantity: "10 servings",
+      expires: "2025-02-07",
+      donor: "Foodies",
+      image: Dal,
+    },
+  ];
+
   return (
-    <section className="food-listing">
+    <div className="food-listing">
       <div className="food-listing-content">
-        <h2>Food Listing & Availability</h2>
-        <p>
-          Donors can list available food in real-time, including descriptions, quantity, and expiration dates.
-          Recipients can search for available donations based on location, food type, and urgency.
-        </p>
+        <h2>Food Listing</h2>
+        <p>Browse through the available food items and their details below.</p>
       </div>
       <div className="food-listing-grid">
-        <div className="food-card">
-          <h3>Fresh Bread</h3>
-          <p>Description: Packaged fresh bread</p>
-          <p>Quantity: 10 loaves</p>
-          <p>Expires: 2025-01-30</p>
-          <button>Claim Donation</button>
-        </div>
-        <div className="food-card">
-          <h3>Vegetables</h3>
-          <p>Description: Organic carrots and lettuce</p>
-          <p>Quantity: 15 kg</p>
-          <p>Expires: 2025-01-28</p>
-          <button>Claim Donation</button>
-        </div>
-        <div className="food-card">
-          <h3>Canned Soup</h3>
-          <p>Description: Assorted canned soups</p>
-          <p>Quantity: 30 cans</p>
-          <p>Expires: 2025-06-15</p>
-          <button>Claim Donation</button>
-        </div>
+        {foodItems.map((item, index) => (
+          <div className="food-card" key={index}>
+            <h3>{item.name}</h3>
+            {item.image && (
+              <img src={item.image} alt={item.name} className="food-image"  />
+            )}
+            <p>Quantity: {item.quantity}</p>
+            <p>Expires: {item.expires}</p>
+            <p>Donor: {item.donor}</p>
+            <button className="claim-button">Claim Donation</button>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
-}
+};
 
-export default FoodListingSection;
+export default FoodListing;
