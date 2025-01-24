@@ -7,6 +7,7 @@ import DonatePage from "./components/DonatePage";
 import ContactUs from "./components/ContactUs";
 import Partners from "./components/Partners";
 import AboutUs from "./components/AboutUs";
+// import Dashboard from "./components/dashboard";
 import "./App.css";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
             </>
           } />
           <Route path="/donate" element={<DonatePage />} />
+          {/* <Route path="/dashboard" element={<Dashboard />} /> */}
         </Routes>
       </div>
     </Router>
